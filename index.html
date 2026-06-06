@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Política de Privacidade — Conceptum IA</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      font-size: 16px;
+      line-height: 1.7;
+      color: #1a1a1a;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem 4rem;
+    }
+    h1 { font-size: 1.8rem; margin-bottom: 0.25rem; }
+    h2 { font-size: 1.15rem; margin-top: 2rem; color: #333; border-bottom: 1px solid #e0e0e0; padding-bottom: 0.3rem; }
+    h3 { font-size: 1rem; margin-top: 1.25rem; color: #444; }
+    p, li { margin: 0.5rem 0; }
+    ul, ol { padding-left: 1.5rem; }
+    a { color: #1a73e8; }
+    .updated { font-size: 0.875rem; color: #666; margin-bottom: 0.75rem; }
+    .lang-link { font-size: 0.875rem; margin-bottom: 2rem; }
+    table { border-collapse: collapse; width: 100%; margin: 1rem 0; }
+    th, td { border: 1px solid #ddd; padding: 0.6rem 0.8rem; text-align: left; font-size: 0.9rem; }
+    th { background: #f5f5f5; font-weight: 600; }
+    .highlight-box { background: #f8f9fa; border-left: 3px solid #1a73e8; padding: 0.75rem 1rem; margin: 1rem 0; border-radius: 0 4px 4px 0; }
+    .deletion-box { background: #fff8e1; border-left: 3px solid #f9a825; padding: 0.75rem 1rem; margin: 1rem 0; border-radius: 0 4px 4px 0; }
+    .section-divider { border: none; border-top: 3px solid #e0e0e0; margin: 4rem 0; }
+  </style>
+</head>
+<body>
+
+<h1>Política de Privacidade</h1>
+<p class="updated">Extensão: <strong>Conceptum IA</strong> &nbsp;|&nbsp; Última atualização: 1 de junho de 2026</p>
+<p class="lang-link"><a href="#english-version">English version below ↓</a></p>
+
+<p>Esta Política de Privacidade descreve de forma completa como a extensão <strong>Conceptum IA</strong> ("extensão") coleta, usa, processa, armazena e compartilha informações. Ao instalar ou utilizar a extensão, você concorda com as práticas descritas neste documento.</p>
+
+<div class="highlight-box">
+  <strong>Resumo:</strong> A Conceptum IA não coleta dados pessoais identificáveis além dos estritamente necessários para validar a licença de uso. O conteúdo dos processos judiciais é enviado diretamente ao provedor de IA escolhido pelo usuário e nunca transita ou é armazenado em servidores próprios da extensão.
+</div>
+
+<h2>1. Responsável pelo tratamento</h2>
+<p><strong>Ricardo Campos</strong><br>
+Desenvolvedor independente<br>
+Contato: <a href="mailto:rrc_temp-conceptum@yahoo.com">rrc_temp-conceptum@yahoo.com</a></p>
+
+<h2>2. Dados coletados, finalidade e base legal</h2>
+
+<p>A extensão coleta e processa exclusivamente os dados descritos abaixo. Nenhum outro dado é coletado.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Categoria de dado</th>
+      <th>Dado específico</th>
+      <th>Finalidade</th>
+      <th>Base legal (LGPD)</th>
+      <th>Onde é processado</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Dado de licença</strong></td>
+      <td>Chave de licença inserida pelo usuário</td>
+      <td>Verificar se o usuário possui licença ativa para usar a extensão.</td>
+      <td>Execução de contrato (art. 7º, V, LGPD)</td>
+      <td>Servidor de autenticação próprio (Cloudflare Workers, EUA)</td>
+    </tr>
+    <tr>
+      <td><strong>Dado técnico de dispositivo</strong></td>
+      <td>Fingerprint de dispositivo: hash SHA-256 derivado de número de núcleos de CPU, memória RAM, plataforma do sistema operacional, idiomas configurados e fuso horário. Os valores originais nunca são armazenados ou transmitidos.</td>
+      <td>Associar a licença a um dispositivo específico para evitar uso simultâneo não autorizado. O hash é irreversível e não identifica o usuário pessoalmente.</td>
+      <td>Legítimo interesse (art. 7º, IX, LGPD) — proteção contra fraude de licença</td>
+      <td>Servidor de autenticação próprio (Cloudflare Workers, EUA)</td>
+    </tr>
+    <tr>
+      <td><strong>Conteúdo de processos judiciais</strong></td>
+      <td>Texto extraído de documentos PDF abertos pelo usuário no sistema PJe</td>
+      <td>Enviado à API do provedor de IA escolhido pelo usuário para gerar análise, resumo ou resposta sobre o processo. A extensão não armazena nem processa esse conteúdo — ele é transmitido diretamente ao provedor selecionado.</td>
+      <td>Consentimento do usuário ao acionar a análise (art. 7º, I, LGPD)</td>
+      <td>API do provedor escolhido pelo usuário (veja Seção 4)</td>
+    </tr>
+    <tr>
+      <td><strong>Credenciais de IA (informações de autenticação)</strong></td>
+      <td>Chaves de API dos provedores de IA inseridas pelo usuário</td>
+      <td>Autenticar as requisições do usuário junto ao provedor de IA escolhido. Armazenadas somente no dispositivo do usuário e nunca transmitidas a servidores da extensão nem a terceiros além do provedor de IA selecionado.</td>
+      <td>Execução de contrato (art. 7º, V, LGPD)</td>
+      <td>Somente no dispositivo do usuário (<code>chrome.storage.local</code>)</td>
+    </tr>
+    <tr>
+      <td><strong>Dados de conta (opcional)</strong></td>
+      <td>Token de sessão do Supabase, se o usuário criar conta</td>
+      <td>Autenticar o usuário em funcionalidades que requerem conta, como gerenciamento de licenças.</td>
+      <td>Execução de contrato (art. 7º, V, LGPD)</td>
+      <td>Supabase (banco de dados em nuvem, EUA)</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>Dados que NÃO coletamos</h3>
+<ul>
+  <li>Nome completo, endereço de e-mail ou qualquer identificador pessoal direto (exceto se o usuário criar conta no Supabase usando e-mail)</li>
+  <li>Histórico de navegação</li>
+  <li>Dados de localização geográfica</li>
+  <li>Dados de comunicação pessoal</li>
+  <li>Informações financeiras ou de pagamento</li>
+  <li>Dados de menores de 18 anos</li>
+</ul>
+
+<h2>3. Como os dados são processados</h2>
+
+<h3>3.1 Validação de licença</h3>
+<p>Quando o usuário insere a chave de licença, a extensão calcula o fingerprint do dispositivo localmente (no navegador) e envia o par <em>chave de licença + fingerprint</em> ao servidor de autenticação via HTTPS. O servidor verifica se a chave é válida e se o dispositivo está autorizado, retornando apenas uma resposta de aprovação ou rejeição. Nenhum outro dado é transmitido nesse processo.</p>
+
+<h3>3.2 Análise de processos</h3>
+<p>O texto extraído de PDFs é transmitido diretamente da extensão para a API do provedor de IA selecionado pelo usuário, usando a chave de API do próprio usuário. A extensão atua como intermediária técnica — o conteúdo nunca passa por servidores próprios da extensão e não é armazenado pela extensão em nenhum momento.</p>
+
+<h3>3.3 Armazenamento local</h3>
+<p>A extensão utiliza <code>chrome.storage.local</code> para armazenar, exclusivamente no dispositivo do usuário:</p>
+<ul>
+  <li>Chave de licença inserida pelo usuário;</li>
+  <li>Chaves de API dos provedores de IA;</li>
+  <li>Preferências e configurações da extensão (ex.: provedor de IA padrão, modelo selecionado);</li>
+  <li>Token de sessão do Supabase (se o usuário criar conta).</li>
+</ul>
+<p>Esses dados permanecem no dispositivo até que o usuário desinstale a extensão ou limpe o armazenamento nas configurações do navegador. Eles não são sincronizados entre dispositivos nem transmitidos a terceiros, exceto nas situações descritas nesta política.</p>
+
+<h2>4. Compartilhamento com terceiros</h2>
+
+<p>Os dados são transmitidos exclusivamente aos seguintes destinatários, conforme a ação do usuário:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Destinatário</th>
+      <th>Dados transmitidos</th>
+      <th>Finalidade</th>
+      <th>Política de privacidade do terceiro</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Servidor de autenticação próprio</strong><br><small>pje-assistente-auth.ricardoribeirocampos.workers.dev (Cloudflare Workers, EUA)</small></td>
+      <td>Chave de licença + fingerprint de dispositivo</td>
+      <td>Validação de licença</td>
+      <td><a href="https://www.cloudflare.com/privacypolicy/" target="_blank">Política de privacidade Cloudflare</a></td>
+    </tr>
+    <tr>
+      <td><strong>Anthropic</strong> (Claude)</td>
+      <td>Conteúdo do processo + chave de API do usuário</td>
+      <td>Geração de análise por IA — somente quando o usuário seleciona este provedor</td>
+      <td><a href="https://www.anthropic.com/privacy" target="_blank">Política de privacidade Anthropic</a></td>
+    </tr>
+    <tr>
+      <td><strong>OpenAI</strong></td>
+      <td>Conteúdo do processo + chave de API do usuário</td>
+      <td>Geração de análise por IA — somente quando o usuário seleciona este provedor</td>
+      <td><a href="https://openai.com/policies/privacy-policy" target="_blank">Política de privacidade OpenAI</a></td>
+    </tr>
+    <tr>
+      <td><strong>Google</strong> (Gemini)</td>
+      <td>Conteúdo do processo + chave de API do usuário</td>
+      <td>Geração de análise por IA — somente quando o usuário seleciona este provedor</td>
+      <td><a href="https://policies.google.com/privacy" target="_blank">Política de privacidade Google</a></td>
+    </tr>
+    <tr>
+      <td><strong>DeepSeek</strong></td>
+      <td>Conteúdo do processo + chave de API do usuário</td>
+      <td>Geração de análise por IA — somente quando o usuário seleciona este provedor</td>
+      <td><a href="https://www.deepseek.com/privacy" target="_blank">Política de privacidade DeepSeek</a></td>
+    </tr>
+    <tr>
+      <td><strong>xAI</strong> (Grok)</td>
+      <td>Conteúdo do processo + chave de API do usuário</td>
+      <td>Geração de análise por IA — somente quando o usuário seleciona este provedor</td>
+      <td><a href="https://x.ai/legal/privacy-policy" target="_blank">Política de privacidade xAI</a></td>
+    </tr>
+    <tr>
+      <td><strong>PPQ.AI</strong></td>
+      <td>Conteúdo do processo + chave de API do usuário</td>
+      <td>Geração de análise por IA — somente quando o usuário seleciona este provedor</td>
+      <td><a href="https://ppq.ai/privacy" target="_blank">Política de privacidade PPQ.AI</a></td>
+    </tr>
+    <tr>
+      <td><strong>Z.AI</strong> (GLM / Zhipu AI)</td>
+      <td>Conteúdo do processo + chave de API do usuário</td>
+      <td>Geração de análise por IA — somente quando o usuário seleciona este provedor</td>
+      <td><a href="https://docs.z.ai/legal-agreement/privacy-policy" target="_blank">Política de privacidade Z.AI</a></td>
+    </tr>
+    <tr>
+      <td><strong>Moonshot AI</strong> (Kimi)</td>
+      <td>Conteúdo do processo + chave de API do usuário</td>
+      <td>Geração de análise por IA — somente quando o usuário seleciona este provedor</td>
+      <td><a href="https://moonshot-ai.com/privacy-policy" target="_blank">Política de privacidade Moonshot AI</a></td>
+    </tr>
+    <tr>
+      <td><strong>Supabase</strong> (EUA)</td>
+      <td>Token de sessão; dados de conta criados pelo usuário</td>
+      <td>Autenticação e gerenciamento de conta/licença — somente se o usuário criar conta</td>
+      <td><a href="https://supabase.com/privacy" target="_blank">Política de privacidade Supabase</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Não vendemos, alugamos, cedemos nem compartilhamos dados com anunciantes, corretores de dados ou quaisquer outros terceiros além dos listados acima.</strong></p>
+
+<h2>5. Transferência internacional de dados</h2>
+<p>Os provedores de IA (Anthropic, OpenAI, Google, DeepSeek, xAI, PPQ.AI, Z.AI, Moonshot AI), o servidor de autenticação (Cloudflare Workers) e o banco de dados (Supabase) operam em servidores localizados fora do Brasil, predominantemente nos Estados Unidos. Ao utilizar a extensão e escolher um provedor de IA, o usuário consente com essa transferência internacional, necessária para a prestação do serviço. Cada provedor está sujeito à sua própria política de privacidade, indicada na Seção 4.</p>
+
+<h2>6. Retenção de dados</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Dado</th>
+      <th>Local</th>
+      <th>Período de retenção</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Chave de licença, chaves de API, preferências</td>
+      <td>Dispositivo do usuário (<code>chrome.storage.local</code>)</td>
+      <td>Até o usuário desinstalar a extensão ou limpar o armazenamento</td>
+    </tr>
+    <tr>
+      <td>Chave de licença + fingerprint</td>
+      <td>Servidor de autenticação (Cloudflare Workers)</td>
+      <td>Enquanto a licença estiver ativa; excluídos mediante solicitação ou expiração da licença</td>
+    </tr>
+    <tr>
+      <td>Conteúdo de processos judiciais</td>
+      <td>Provedores de IA (conforme política de cada provedor)</td>
+      <td>Determinado pela política do provedor escolhido pelo usuário; a extensão não retém cópia</td>
+    </tr>
+    <tr>
+      <td>Dados de conta Supabase</td>
+      <td>Supabase</td>
+      <td>Enquanto a conta estiver ativa; excluídos mediante solicitação</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>7. Segurança</h2>
+<ul>
+  <li>Todas as comunicações com serviços externos utilizam HTTPS/TLS.</li>
+  <li>O fingerprint do dispositivo é calculado localmente como hash SHA-256 e transmitido apenas na forma de hash — os dados originais (CPU, memória, etc.) nunca deixam o dispositivo.</li>
+  <li>As chaves de API dos provedores de IA são armazenadas somente no armazenamento local do navegador, protegido pelo perfil do usuário no sistema operacional, e nunca são transmitidas a servidores da extensão.</li>
+  <li>Em caso de incidente de segurança que afete dados pessoais, os usuários afetados serão notificados por e-mail (se disponível) ou por meio de atualização publicada nesta página, no prazo cabível.</li>
+</ul>
+
+<h2>8. Cookies e rastreamento</h2>
+<p>A extensão <strong>não utiliza cookies</strong>, pixels de rastreamento, impressões digitais de navegador para fins publicitários, ferramentas de análise comportamental (como Google Analytics) nem qualquer outra tecnologia de rastreamento entre sites. O fingerprint de dispositivo descrito nesta política é usado exclusivamente para validação de licença e nunca para rastreamento de comportamento do usuário.</p>
+
+<h2>9. Dados de menores</h2>
+<p>Esta extensão é destinada exclusivamente a profissionais do direito e não coleta intencionalmente dados de menores de 18 anos. Se identificarmos que dados de menor foram inadvertidamente coletados, os excluiremos imediatamente.</p>
+
+<h2>10. Seus direitos (LGPD — Lei nº 13.709/2018)</h2>
+<p>Na qualidade de titular dos dados, você tem os seguintes direitos garantidos pela Lei Geral de Proteção de Dados:</p>
+<ul>
+  <li><strong>Acesso:</strong> solicitar confirmação da existência e acesso aos seus dados.</li>
+  <li><strong>Correção:</strong> solicitar a retificação de dados incompletos, inexatos ou desatualizados.</li>
+  <li><strong>Exclusão:</strong> solicitar a eliminação dos dados tratados com base em seu consentimento.</li>
+  <li><strong>Portabilidade:</strong> solicitar cópia dos dados em formato estruturado.</li>
+  <li><strong>Revogação do consentimento:</strong> revogar o consentimento a qualquer momento, sem prejuízo das operações já realizadas.</li>
+  <li><strong>Oposição:</strong> opor-se ao tratamento realizado com base em legítimo interesse, se aplicável.</li>
+</ul>
+<p>Para exercer qualquer desses direitos, entre em contato pelo e-mail <a href="mailto:rrc_temp-conceptum@yahoo.com">rrc_temp-conceptum@yahoo.com</a>. Dados armazenados localmente podem ser excluídos diretamente pelo usuário desinstalando a extensão ou limpando o armazenamento nas configurações do Chrome (<em>chrome://settings/content/all</em>).</p>
+
+<h2>11. Uso limitado dos dados (Chrome Web Store)</h2>
+<p>Em conformidade com a <a href="https://developer.chrome.com/docs/webstore/program-policies/limited-use/" target="_blank">Política de Uso Limitado da Chrome Web Store</a>, o uso dos dados obtidos por esta extensão está sujeito às seguintes restrições:</p>
+<ul>
+  <li>Os dados são usados <strong>exclusivamente</strong> para fornecer ou melhorar a funcionalidade principal da extensão (análise de processos judiciais via IA).</li>
+  <li>Os dados <strong>não são transferidos</strong> a terceiros, exceto quando necessário para fornecer as funcionalidades descritas nesta política ou conforme exigido por lei.</li>
+  <li>Os dados <strong>não são vendidos</strong> a terceiros.</li>
+  <li>Os dados <strong>não são usados</strong> para fins publicitários, de personalização, de criação de perfis ou para qualquer finalidade não relacionada ao funcionamento da extensão.</li>
+  <li>O acesso aos dados e seu uso não são transferidos a terceiros sem o consentimento explícito do usuário, exceto nos casos descritos nesta política.</li>
+</ul>
+
+<h2>12. Conformidade com as políticas da Chrome Web Store</h2>
+<p>Esta extensão foi desenvolvida em conformidade com as <a href="https://developer.chrome.com/docs/webstore/program-policies/" target="_blank">Políticas do Programa para Desenvolvedores da Chrome Web Store</a>. Os dados do usuário são usados exclusivamente para fornecer as funcionalidades descritas na extensão e não são utilizados para fins não relacionados à sua função principal.</p>
+
+<h2>13. Alterações nesta política</h2>
+<p>Quaisquer alterações relevantes serão publicadas nesta página com atualização da data no topo do documento. Recomendamos que o usuário consulte esta página periodicamente.</p>
+
+<h2>14. Como excluir seus dados e sua conta</h2>
+
+<div class="deletion-box">
+  <strong>Resumo rápido:</strong> dados locais são excluídos ao desinstalar a extensão; dados no servidor são excluídos mediante solicitação por e-mail em até 30 dias.
+</div>
+
+<h3>Dados armazenados no seu dispositivo (chave de licença, chaves de API, preferências)</h3>
+<ol>
+  <li><strong>Desinstalar a extensão</strong> — remove todos os dados locais automaticamente.</li>
+  <li><strong>Limpar manualmente</strong> — acesse <code>chrome://settings/content/all</code> no Chrome, localize a extensão Conceptum IA e clique em "Limpar".</li>
+</ol>
+
+<h3>Dados no servidor de autenticação (chave de licença + fingerprint de dispositivo)</h3>
+<p>Envie um e-mail para <a href="mailto:rrc_temp-conceptum@yahoo.com">rrc_temp-conceptum@yahoo.com</a> com o assunto <strong>"Exclusão de dados — licença"</strong> informando a chave de licença que deseja excluir. Os dados serão removidos do servidor em até 30 dias.</p>
+
+<h3>Conta Supabase (apenas para usuários que criaram conta)</h3>
+<p>Envie um e-mail para <a href="mailto:rrc_temp-conceptum@yahoo.com">rrc_temp-conceptum@yahoo.com</a> com o assunto <strong>"Exclusão de conta"</strong>. Todos os dados associados à sua conta (token de sessão, dados de licença) serão excluídos do Supabase em até 30 dias.</p>
+
+<h3>Conteúdo de processos enviado às APIs de IA</h3>
+<p>A extensão não armazena cópias desse conteúdo. Para solicitar a exclusão de dados retidos por um provedor de IA, consulte a política de privacidade do respectivo provedor (links na Seção 4).</p>
+
+<h2>15. Contato</h2>
+<p>Dúvidas, solicitações ou reclamações relacionadas a esta política:<br>
+<a href="mailto:rrc_temp-conceptum@yahoo.com">rrc_temp-conceptum@yahoo.com</a></p>
+
+<hr class="section-divider" id="english-version">
+
+<h1>Privacy Policy <span style="font-size:1rem;font-weight:normal;color:#666;">(English)</span></h1>
+<p class="updated">Extension: <strong>Conceptum IA</strong> &nbsp;|&nbsp; Last updated: June 1, 2026</p>
+<p class="lang-link"><a href="#top">Versão em português acima ↑</a></p>
+
+<p>This Privacy Policy fully describes how the <strong>Conceptum IA</strong> browser extension ("extension") collects, uses, processes, stores, and shares information. By installing or using the extension, you agree to the practices described in this document.</p>
+
+<div class="highlight-box">
+  <strong>Summary:</strong> Conceptum IA does not collect personally identifiable data beyond what is strictly necessary to validate the usage license. Judicial case content is sent directly to the AI provider chosen by the user and never transits through or is stored on the extension's own servers.
+</div>
+
+<h2>1. Data Controller</h2>
+<p><strong>Ricardo Campos</strong><br>
+Independent developer<br>
+Contact: <a href="mailto:rrc_temp-conceptum@yahoo.com">rrc_temp-conceptum@yahoo.com</a></p>
+
+<h2>2. Data Collected, Purpose, and Legal Basis</h2>
+
+<p>The extension collects and processes exclusively the data described below. No other data is collected.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Data category</th>
+      <th>Specific data</th>
+      <th>Purpose</th>
+      <th>Legal basis (LGPD)</th>
+      <th>Where processed</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>License data</strong></td>
+      <td>License key entered by the user</td>
+      <td>Verify that the user holds an active license to use the extension.</td>
+      <td>Contract performance (Art. 7, V, LGPD)</td>
+      <td>Developer's own authentication server (Cloudflare Workers, USA)</td>
+    </tr>
+    <tr>
+      <td><strong>Device technical data</strong></td>
+      <td>Device fingerprint: SHA-256 hash derived from CPU core count, RAM, OS platform, configured languages, and timezone. Original values are never stored or transmitted.</td>
+      <td>Associate the license with a specific device to prevent unauthorized simultaneous use. The hash is irreversible and does not personally identify the user.</td>
+      <td>Legitimate interest (Art. 7, IX, LGPD) — license fraud prevention</td>
+      <td>Developer's own authentication server (Cloudflare Workers, USA)</td>
+    </tr>
+    <tr>
+      <td><strong>Judicial case content (site content)</strong></td>
+      <td>Text extracted from PDF documents opened by the user in the PJe system</td>
+      <td>Sent to the AI provider's API chosen by the user to generate analysis, summaries, or responses about the case. The extension does not store or process this content — it is transmitted directly to the selected provider.</td>
+      <td>User consent when triggering analysis (Art. 7, I, LGPD)</td>
+      <td>API of the provider chosen by the user (see Section 4)</td>
+    </tr>
+    <tr>
+      <td><strong>AI credentials (authentication information)</strong></td>
+      <td>AI provider API keys entered by the user</td>
+      <td>Authenticate the user's requests to the chosen AI provider. Stored exclusively on the user's device and never transmitted to the extension's servers or to any third party other than the selected AI provider.</td>
+      <td>Contract performance (Art. 7, V, LGPD)</td>
+      <td>User's device only (<code>chrome.storage.local</code>)</td>
+    </tr>
+    <tr>
+      <td><strong>Account data (optional)</strong></td>
+      <td>Supabase session token, if the user creates an account</td>
+      <td>Authenticate the user for features that require an account, such as license management.</td>
+      <td>Contract performance (Art. 7, V, LGPD)</td>
+      <td>Supabase (cloud database, USA)</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>Data we do NOT collect</h3>
+<ul>
+  <li>Full name, email address, or any direct personal identifier (unless the user creates a Supabase account using an email)</li>
+  <li>Browsing history</li>
+  <li>Geographic location data</li>
+  <li>Personal communications data</li>
+  <li>Financial or payment information</li>
+  <li>Data from minors under 18</li>
+</ul>
+
+<h2>3. How Data Is Processed</h2>
+
+<h3>3.1 License validation</h3>
+<p>When the user enters the license key, the extension calculates the device fingerprint locally (in the browser) and sends the <em>license key + fingerprint</em> pair to the authentication server via HTTPS. The server verifies whether the key is valid and whether the device is authorized, returning only an approval or rejection response. No other data is transmitted in this process.</p>
+
+<h3>3.2 Case analysis</h3>
+<p>Text extracted from PDFs is transmitted directly from the extension to the AI provider's API selected by the user, using the user's own API key. The extension acts as a technical intermediary — the content never passes through the extension's own servers and is not stored by the extension at any point.</p>
+
+<h3>3.3 Local storage</h3>
+<p>The extension uses <code>chrome.storage.local</code> to store, exclusively on the user's device:</p>
+<ul>
+  <li>License key entered by the user;</li>
+  <li>AI provider API keys;</li>
+  <li>Extension preferences and settings (e.g., default AI provider, selected model);</li>
+  <li>Supabase session token (if the user creates an account).</li>
+</ul>
+<p>This data remains on the device until the user uninstalls the extension or clears storage in the browser settings. It is not synced across devices or transmitted to third parties, except in situations described in this policy.</p>
+
+<h2>4. Third-Party Sharing</h2>
+
+<p>Data is transmitted exclusively to the following recipients, based on the user's actions:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Recipient</th>
+      <th>Data transmitted</th>
+      <th>Purpose</th>
+      <th>Third-party privacy policy</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Developer's authentication server</strong><br><small>pje-assistente-auth.ricardoribeirocampos.workers.dev (Cloudflare Workers, USA)</small></td>
+      <td>License key + device fingerprint</td>
+      <td>License validation</td>
+      <td><a href="https://www.cloudflare.com/privacypolicy/" target="_blank">Cloudflare Privacy Policy</a></td>
+    </tr>
+    <tr>
+      <td><strong>Anthropic</strong> (Claude)</td>
+      <td>Case content + user's API key</td>
+      <td>AI-generated analysis — only when the user selects this provider</td>
+      <td><a href="https://www.anthropic.com/privacy" target="_blank">Anthropic Privacy Policy</a></td>
+    </tr>
+    <tr>
+      <td><strong>OpenAI</strong></td>
+      <td>Case content + user's API key</td>
+      <td>AI-generated analysis — only when the user selects this provider</td>
+      <td><a href="https://openai.com/policies/privacy-policy" target="_blank">OpenAI Privacy Policy</a></td>
+    </tr>
+    <tr>
+      <td><strong>Google</strong> (Gemini)</td>
+      <td>Case content + user's API key</td>
+      <td>AI-generated analysis — only when the user selects this provider</td>
+      <td><a href="https://policies.google.com/privacy" target="_blank">Google Privacy Policy</a></td>
+    </tr>
+    <tr>
+      <td><strong>DeepSeek</strong></td>
+      <td>Case content + user's API key</td>
+      <td>AI-generated analysis — only when the user selects this provider</td>
+      <td><a href="https://www.deepseek.com/privacy" target="_blank">DeepSeek Privacy Policy</a></td>
+    </tr>
+    <tr>
+      <td><strong>xAI</strong> (Grok)</td>
+      <td>Case content + user's API key</td>
+      <td>AI-generated analysis — only when the user selects this provider</td>
+      <td><a href="https://x.ai/legal/privacy-policy" target="_blank">xAI Privacy Policy</a></td>
+    </tr>
+    <tr>
+      <td><strong>PPQ.AI</strong></td>
+      <td>Case content + user's API key</td>
+      <td>AI-generated analysis — only when the user selects this provider</td>
+      <td><a href="https://ppq.ai/privacy" target="_blank">PPQ.AI Privacy Policy</a></td>
+    </tr>
+    <tr>
+      <td><strong>Z.AI</strong> (GLM / Zhipu AI)</td>
+      <td>Case content + user's API key</td>
+      <td>AI-generated analysis — only when the user selects this provider</td>
+      <td><a href="https://docs.z.ai/legal-agreement/privacy-policy" target="_blank">Z.AI Privacy Policy</a></td>
+    </tr>
+    <tr>
+      <td><strong>Moonshot AI</strong> (Kimi)</td>
+      <td>Case content + user's API key</td>
+      <td>AI-generated analysis — only when the user selects this provider</td>
+      <td><a href="https://moonshot-ai.com/privacy-policy" target="_blank">Moonshot AI Privacy Policy</a></td>
+    </tr>
+    <tr>
+      <td><strong>Supabase</strong> (USA)</td>
+      <td>Session token; account data created by the user</td>
+      <td>Authentication and account/license management — only if the user creates an account</td>
+      <td><a href="https://supabase.com/privacy" target="_blank">Supabase Privacy Policy</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>We do not sell, rent, lend, or share data with advertisers, data brokers, or any other third parties beyond those listed above.</strong></p>
+
+<h2>5. International Data Transfers</h2>
+<p>The AI providers (Anthropic, OpenAI, Google, DeepSeek, xAI, PPQ.AI, Z.AI, Moonshot AI), the authentication server (Cloudflare Workers), and the database (Supabase) operate on servers located outside Brazil, predominantly in the United States. By using the extension and choosing an AI provider, the user consents to this international transfer, which is necessary to provide the service. Each provider is subject to its own privacy policy, as indicated in Section 4.</p>
+
+<h2>6. Data Retention</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Data</th>
+      <th>Location</th>
+      <th>Retention period</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>License key, API keys, preferences</td>
+      <td>User's device (<code>chrome.storage.local</code>)</td>
+      <td>Until the user uninstalls the extension or clears storage</td>
+    </tr>
+    <tr>
+      <td>License key + device fingerprint</td>
+      <td>Authentication server (Cloudflare Workers)</td>
+      <td>While the license is active; deleted upon request or license expiration</td>
+    </tr>
+    <tr>
+      <td>Judicial case content</td>
+      <td>AI providers (per each provider's policy)</td>
+      <td>Determined by the policy of the provider chosen by the user; the extension retains no copy</td>
+    </tr>
+    <tr>
+      <td>Supabase account data</td>
+      <td>Supabase</td>
+      <td>While the account is active; deleted upon request</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>7. Security</h2>
+<ul>
+  <li>All communications with external services use HTTPS/TLS.</li>
+  <li>The device fingerprint is computed locally as a SHA-256 hash and transmitted only as a hash — the original data (CPU, memory, etc.) never leaves the device.</li>
+  <li>AI provider API keys are stored only in the browser's local storage, protected by the user's OS profile, and are never transmitted to the extension's servers.</li>
+  <li>In the event of a security incident affecting personal data, affected users will be notified by email (if available) or through an update published on this page, within a reasonable timeframe.</li>
+</ul>
+
+<h2>8. Cookies and Tracking</h2>
+<p>The extension <strong>does not use cookies</strong>, tracking pixels, browser fingerprinting for advertising purposes, behavioral analytics tools (such as Google Analytics), or any other cross-site tracking technology. The device fingerprint described in this policy is used exclusively for license validation and never for tracking user behavior.</p>
+
+<h2>9. Children's Data</h2>
+<p>This extension is intended exclusively for legal professionals and does not intentionally collect data from minors under 18. If we identify that data from a minor has been inadvertently collected, we will delete it immediately.</p>
+
+<h2>10. Your Rights</h2>
+<p>As a data subject, you have the following rights under Brazil's General Data Protection Law (LGPD — Law No. 13,709/2018):</p>
+<ul>
+  <li><strong>Access:</strong> request confirmation of the existence of and access to your data.</li>
+  <li><strong>Correction:</strong> request rectification of incomplete, inaccurate, or outdated data.</li>
+  <li><strong>Deletion:</strong> request erasure of data processed on the basis of your consent.</li>
+  <li><strong>Portability:</strong> request a copy of your data in a structured format.</li>
+  <li><strong>Revocation of consent:</strong> withdraw consent at any time without prejudice to operations already performed.</li>
+  <li><strong>Objection:</strong> object to processing carried out on the basis of legitimate interest, where applicable.</li>
+</ul>
+<p>To exercise any of these rights, contact <a href="mailto:rrc_temp-conceptum@yahoo.com">rrc_temp-conceptum@yahoo.com</a>. Data stored locally can be deleted directly by the user by uninstalling the extension or clearing storage in Chrome settings (<em>chrome://settings/content/all</em>).</p>
+
+<h2>11. Limited Use (Chrome Web Store)</h2>
+<p>In compliance with the <a href="https://developer.chrome.com/docs/webstore/program-policies/limited-use/" target="_blank">Chrome Web Store Limited Use Policy</a>, the use of data obtained by this extension is subject to the following restrictions:</p>
+<ul>
+  <li>Data is used <strong>exclusively</strong> to provide or improve the extension's core functionality (AI-powered analysis of judicial cases).</li>
+  <li>Data is <strong>not transferred</strong> to third parties except as necessary to provide the features described in this policy or as required by law.</li>
+  <li>Data is <strong>not sold</strong> to third parties.</li>
+  <li>Data is <strong>not used</strong> for advertising, personalization, profiling, or any purpose unrelated to the extension's operation.</li>
+  <li>Access to and use of data is not transferred to third parties without the user's explicit consent, except as described in this policy.</li>
+</ul>
+
+<h2>12. Chrome Web Store Policy Compliance</h2>
+<p>This extension was developed in compliance with the <a href="https://developer.chrome.com/docs/webstore/program-policies/" target="_blank">Chrome Web Store Developer Program Policies</a>. User data is used exclusively to provide the features described in the extension and is not used for purposes unrelated to its primary function.</p>
+
+<h2>13. Changes to This Policy</h2>
+<p>Any relevant changes will be published on this page with an updated date at the top of the document. We recommend that users consult this page periodically.</p>
+
+<h2>14. How to Delete Your Data and Account</h2>
+
+<div class="deletion-box">
+  <strong>Quick summary:</strong> local data is deleted when you uninstall the extension; server-side data is deleted upon email request within 30 days.
+</div>
+
+<h3>Data stored on your device (license key, API keys, preferences)</h3>
+<ol>
+  <li><strong>Uninstall the extension</strong> — automatically removes all local data.</li>
+  <li><strong>Clear storage manually</strong> — go to <code>chrome://settings/content/all</code> in Chrome, find the Conceptum IA extension, and click "Clear".</li>
+</ol>
+
+<h3>Data on the authentication server (license key + device fingerprint)</h3>
+<p>Send an email to <a href="mailto:rrc_temp-conceptum@yahoo.com">rrc_temp-conceptum@yahoo.com</a> with the subject line <strong>"Data deletion — license"</strong>, including the license key you wish to delete. Your data will be removed from the server within 30 days.</p>
+
+<h3>Supabase account (only for users who created an account)</h3>
+<p>Send an email to <a href="mailto:rrc_temp-conceptum@yahoo.com">rrc_temp-conceptum@yahoo.com</a> with the subject line <strong>"Account deletion"</strong>. All data associated with your account (session token, license data) will be deleted from Supabase within 30 days.</p>
+
+<h3>Judicial case content sent to AI APIs</h3>
+<p>The extension does not store copies of this content. To request deletion of data retained by an AI provider, please refer to the respective provider's privacy policy (links in Section 4).</p>
+
+<h2>15. Contact</h2>
+<p>Questions, requests, or complaints related to this policy:<br>
+<a href="mailto:rrc_temp-conceptum@yahoo.com">rrc_temp-conceptum@yahoo.com</a></p>
+
+</body>
+</html>
