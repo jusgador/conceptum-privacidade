@@ -41,6 +41,8 @@
 
 <p>Esta Política de Privacidade descreve de forma completa como a extensão <strong>Conceptum IA</strong> ("extensão") coleta, usa, processa, armazena e compartilha informações. Ao instalar ou utilizar a extensão, você concorda com as práticas descritas neste documento.</p>
 
+<p><strong>Âmbito de uso restrito:</strong> a Conceptum IA é uma ferramenta de uso interno, destinada <strong>exclusivamente ao magistrado e aos servidores da 34ª Vara Federal da Seção Judiciária do Ceará</strong>. Não se destina ao público em geral, e o acesso é controlado por licença individual. Publicada na Chrome Web Store apenas na modalidade "não listada" (acesso por link direto).</p>
+
 <div class="highlight-box">
   <strong>Resumo:</strong> A Conceptum IA não coleta dados pessoais identificáveis além dos estritamente necessários para validar a licença de uso. O conteúdo dos processos judiciais é enviado diretamente ao provedor de IA escolhido pelo usuário e nunca transita ou é armazenado em servidores próprios da extensão.
 </div>
@@ -105,7 +107,7 @@ Contato: <a href="mailto:rrc_temp-conceptum@yahoo.com">rrc_temp-conceptum@yahoo.
 
 <h3>Dados que NÃO coletamos</h3>
 <ul>
-  <li>Nome completo, endereço de e-mail ou qualquer identificador pessoal direto (exceto se o usuário criar conta no Supabase usando e-mail)</li>
+  <li>Nome, e-mail ou identificador pessoal direto — não são coletados nem transmitidos a servidores da extensão. Exceções: o e-mail é usado apenas para autenticação caso o usuário crie conta no Supabase; e, se o usuário preencher os dados de assinatura da minuta (nome, cargo, cidade), estes ficam armazenados <strong>exclusivamente no seu dispositivo</strong>.</li>
   <li>Histórico de navegação</li>
   <li>Dados de localização geográfica</li>
   <li>Dados de comunicação pessoal</li>
@@ -125,8 +127,10 @@ Contato: <a href="mailto:rrc_temp-conceptum@yahoo.com">rrc_temp-conceptum@yahoo.
 <p>A extensão utiliza <code>chrome.storage.local</code> para armazenar, exclusivamente no dispositivo do usuário:</p>
 <ul>
   <li>Chave de licença inserida pelo usuário;</li>
-  <li>Chaves de API dos provedores de IA;</li>
-  <li>Preferências e configurações da extensão (ex.: provedor de IA padrão, modelo selecionado);</li>
+  <li>Chaves de API dos provedores de IA e do Google Cloud Vision;</li>
+  <li>Preferências e configurações da extensão (ex.: provedor de IA padrão, modelo selecionado, mecanismo de OCR, parâmetros avançados);</li>
+  <li>Dados de assinatura da minuta preenchidos pelo usuário (nome, cargo, cidade) e demais preferências de redação;</li>
+  <li>Modelos de minuta e itens da checklist da Triagem Inicial, incluindo cópias baixadas da biblioteca compartilhada;</li>
   <li>Token de sessão do Supabase (se o usuário criar conta).</li>
 </ul>
 <p>Esses dados permanecem no dispositivo até que o usuário desinstale a extensão ou limpe o armazenamento nas configurações do navegador. Eles não são sincronizados entre dispositivos nem transmitidos a terceiros, exceto nas situações descritas nesta política.</p>
@@ -271,7 +275,7 @@ Contato: <a href="mailto:rrc_temp-conceptum@yahoo.com">rrc_temp-conceptum@yahoo.
 <p>A extensão <strong>não utiliza cookies</strong>, pixels de rastreamento, impressões digitais de navegador para fins publicitários, ferramentas de análise comportamental (como Google Analytics) nem qualquer outra tecnologia de rastreamento entre sites. O fingerprint de dispositivo descrito nesta política é usado exclusivamente para validação de licença e nunca para rastreamento de comportamento do usuário.</p>
 
 <h2>9. Dados de menores</h2>
-<p>Esta extensão é destinada exclusivamente a profissionais do direito e não coleta intencionalmente dados de menores de 18 anos. Se identificarmos que dados de menor foram inadvertidamente coletados, os excluiremos imediatamente.</p>
+<p>Esta extensão é destinada exclusivamente ao magistrado e aos servidores da 34ª Vara Federal da Seção Judiciária do Ceará — todos profissionais adultos — e não coleta intencionalmente dados de menores de 18 anos. Se identificarmos que dados de menor foram inadvertidamente coletados, os excluiremos imediatamente.</p>
 
 <h2>10. Seus direitos (LGPD — Lei nº 13.709/2018)</h2>
 <p>Na qualidade de titular dos dados, você tem os seguintes direitos garantidos pela Lei Geral de Proteção de Dados:</p>
@@ -335,6 +339,8 @@ Contato: <a href="mailto:rrc_temp-conceptum@yahoo.com">rrc_temp-conceptum@yahoo.
 <p class="lang-link"><a href="#top">Versão em português acima ↑</a></p>
 
 <p>This Privacy Policy fully describes how the <strong>Conceptum IA</strong> browser extension ("extension") collects, uses, processes, stores, and shares information. By installing or using the extension, you agree to the practices described in this document.</p>
+
+<p><strong>Restricted scope of use:</strong> Conceptum IA is an internal tool intended <strong>exclusively for the judge and staff of the 34ª Vara Federal da Seção Judiciária do Ceará (34th Federal Court, Judiciary Section of Ceará, Brazil)</strong>. It is not intended for the general public, and access is controlled by an individual license. It is published on the Chrome Web Store as "unlisted" only (access by direct link).</p>
 
 <div class="highlight-box">
   <strong>Summary:</strong> Conceptum IA does not collect personally identifiable data beyond what is strictly necessary to validate the usage license. Judicial case content is sent directly to the AI provider chosen by the user and never transits through or is stored on the extension's own servers.
@@ -400,7 +406,7 @@ Contact: <a href="mailto:rrc_temp-conceptum@yahoo.com">rrc_temp-conceptum@yahoo.
 
 <h3>Data we do NOT collect</h3>
 <ul>
-  <li>Full name, email address, or any direct personal identifier (unless the user creates a Supabase account using an email)</li>
+  <li>Name, email, or any direct personal identifier — not collected or transmitted to the extension's servers. Exceptions: the email is used only for authentication if the user creates a Supabase account; and, if the user fills in the document signature data (name, position, city), it is stored <strong>exclusively on the user's device</strong>.</li>
   <li>Browsing history</li>
   <li>Geographic location data</li>
   <li>Personal communications data</li>
@@ -420,8 +426,10 @@ Contact: <a href="mailto:rrc_temp-conceptum@yahoo.com">rrc_temp-conceptum@yahoo.
 <p>The extension uses <code>chrome.storage.local</code> to store, exclusively on the user's device:</p>
 <ul>
   <li>License key entered by the user;</li>
-  <li>AI provider API keys;</li>
-  <li>Extension preferences and settings (e.g., default AI provider, selected model);</li>
+  <li>AI provider and Google Cloud Vision API keys;</li>
+  <li>Extension preferences and settings (e.g., default AI provider, selected model, OCR engine, advanced parameters);</li>
+  <li>Document signature data entered by the user (name, position, city) and other drafting preferences;</li>
+  <li>Draft (minuta) templates and Initial Screening checklist items, including copies downloaded from the shared library;</li>
   <li>Supabase session token (if the user creates an account).</li>
 </ul>
 <p>This data remains on the device until the user uninstalls the extension or clears storage in the browser settings. It is not synced across devices or transmitted to third parties, except in situations described in this policy.</p>
@@ -566,7 +574,7 @@ Contact: <a href="mailto:rrc_temp-conceptum@yahoo.com">rrc_temp-conceptum@yahoo.
 <p>The extension <strong>does not use cookies</strong>, tracking pixels, browser fingerprinting for advertising purposes, behavioral analytics tools (such as Google Analytics), or any other cross-site tracking technology. The device fingerprint described in this policy is used exclusively for license validation and never for tracking user behavior.</p>
 
 <h2>9. Children's Data</h2>
-<p>This extension is intended exclusively for legal professionals and does not intentionally collect data from minors under 18. If we identify that data from a minor has been inadvertently collected, we will delete it immediately.</p>
+<p>This extension is intended exclusively for the judge and staff of the 34ª Vara Federal da Seção Judiciária do Ceará — all adult professionals — and does not intentionally collect data from minors under 18. If we identify that data from a minor has been inadvertently collected, we will delete it immediately.</p>
 
 <h2>10. Your Rights</h2>
 <p>As a data subject, you have the following rights under Brazil's General Data Protection Law (LGPD — Law No. 13,709/2018):</p>
