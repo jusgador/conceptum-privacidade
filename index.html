@@ -33,8 +33,10 @@
 </head>
 <body>
 
+<!-- ═══════════════════  VERSÃO EM PORTUGUÊS  ═══════════════════ -->
+
 <h1>Política de Privacidade</h1>
-<p class="updated">Extensão: <strong>Conceptum IA</strong> &nbsp;|&nbsp; Última atualização: 1 de junho de 2026</p>
+<p class="updated">Extensão: <strong>Conceptum IA</strong> &nbsp;|&nbsp; Última atualização: 3 de julho de 2026</p>
 <p class="lang-link"><a href="#english-version">English version below ↓</a></p>
 
 <p>Esta Política de Privacidade descreve de forma completa como a extensão <strong>Conceptum IA</strong> ("extensão") coleta, usa, processa, armazena e compartilha informações. Ao instalar ou utilizar a extensão, você concorda com as práticas descritas neste documento.</p>
@@ -80,7 +82,7 @@ Contato: <a href="mailto:rrc_temp-conceptum@yahoo.com">rrc_temp-conceptum@yahoo.
     <tr>
       <td><strong>Conteúdo de processos judiciais</strong></td>
       <td>Texto extraído de documentos PDF abertos pelo usuário no sistema PJe</td>
-      <td>Enviado à API do provedor de IA escolhido pelo usuário para gerar análise, resumo ou resposta sobre o processo. A extensão não armazena nem processa esse conteúdo — ele é transmitido diretamente ao provedor selecionado.</td>
+      <td>Enviado à API do provedor de IA escolhido pelo usuário para gerar análise, resumo ou resposta sobre o processo. A extensão não armazena nem processa esse conteúdo — ele é transmitido diretamente ao provedor selecionado. Quando o documento é digitalizado (imagem), as imagens das páginas podem ser enviadas a um serviço de OCR — um provedor de IA com visão ou o Google Cloud Vision — para extração do texto.</td>
       <td>Consentimento do usuário ao acionar a análise (art. 7º, I, LGPD)</td>
       <td>API do provedor escolhido pelo usuário (veja Seção 4)</td>
     </tr>
@@ -198,6 +200,18 @@ Contato: <a href="mailto:rrc_temp-conceptum@yahoo.com">rrc_temp-conceptum@yahoo.
       <td><a href="https://moonshot-ai.com/privacy-policy" target="_blank">Política de privacidade Moonshot AI</a></td>
     </tr>
     <tr>
+      <td><strong>OpenRouter</strong> <small>(agregador — roteia a requisição para empresas de modelos como Anthropic, OpenAI, Google, xAI, DeepSeek, Moonshot, Mistral, Qwen)</small></td>
+      <td>Conteúdo do processo (texto ou imagens de páginas para OCR) + chave de API do usuário</td>
+      <td>Geração de análise por IA ou OCR — somente quando o usuário seleciona este provedor</td>
+      <td><a href="https://openrouter.ai/privacy" target="_blank">Política de privacidade OpenRouter</a></td>
+    </tr>
+    <tr>
+      <td><strong>Google Cloud Vision</strong> <small>(mecanismo de OCR)</small></td>
+      <td>Imagens das páginas de documentos digitalizados + chave de API do usuário</td>
+      <td>Reconhecimento óptico de caracteres (OCR) para extrair texto de PDFs em imagem — somente quando o usuário seleciona este mecanismo de OCR na Triagem Inicial</td>
+      <td><a href="https://cloud.google.com/terms/cloud-privacy-notice" target="_blank">Aviso de privacidade do Google Cloud</a></td>
+    </tr>
+    <tr>
       <td><strong>Supabase</strong> (EUA)</td>
       <td>Token de sessão; dados de conta criados pelo usuário</td>
       <td>Autenticação e gerenciamento de conta/licença — somente se o usuário criar conta</td>
@@ -209,7 +223,7 @@ Contato: <a href="mailto:rrc_temp-conceptum@yahoo.com">rrc_temp-conceptum@yahoo.
 <p><strong>Não vendemos, alugamos, cedemos nem compartilhamos dados com anunciantes, corretores de dados ou quaisquer outros terceiros além dos listados acima.</strong></p>
 
 <h2>5. Transferência internacional de dados</h2>
-<p>Os provedores de IA (Anthropic, OpenAI, Google, DeepSeek, xAI, PPQ.AI, Z.AI, Moonshot AI), o servidor de autenticação (Cloudflare Workers) e o banco de dados (Supabase) operam em servidores localizados fora do Brasil, predominantemente nos Estados Unidos. Ao utilizar a extensão e escolher um provedor de IA, o usuário consente com essa transferência internacional, necessária para a prestação do serviço. Cada provedor está sujeito à sua própria política de privacidade, indicada na Seção 4.</p>
+<p>Os provedores de IA (Anthropic, OpenAI, Google, DeepSeek, xAI, PPQ.AI, Z.AI, Moonshot AI, OpenRouter), o mecanismo de OCR Google Cloud Vision, o servidor de autenticação (Cloudflare Workers) e o banco de dados (Supabase) operam em servidores localizados fora do Brasil, predominantemente nos Estados Unidos. Ao utilizar a extensão e escolher um provedor de IA, o usuário consente com essa transferência internacional, necessária para a prestação do serviço. Cada provedor está sujeito à sua própria política de privacidade, indicada na Seção 4.</p>
 
 <h2>6. Retenção de dados</h2>
 
@@ -234,7 +248,7 @@ Contato: <a href="mailto:rrc_temp-conceptum@yahoo.com">rrc_temp-conceptum@yahoo.
     </tr>
     <tr>
       <td>Conteúdo de processos judiciais</td>
-      <td>Provedores de IA (conforme política de cada provedor)</td>
+      <td>Provedores de IA e mecanismo de OCR Google Cloud Vision (conforme política de cada um)</td>
       <td>Determinado pela política do provedor escolhido pelo usuário; a extensão não retém cópia</td>
     </tr>
     <tr>
@@ -312,10 +326,12 @@ Contato: <a href="mailto:rrc_temp-conceptum@yahoo.com">rrc_temp-conceptum@yahoo.
 <p>Dúvidas, solicitações ou reclamações relacionadas a esta política:<br>
 <a href="mailto:rrc_temp-conceptum@yahoo.com">rrc_temp-conceptum@yahoo.com</a></p>
 
+<!-- ═══════════════════  ENGLISH VERSION  ═══════════════════ -->
+
 <hr class="section-divider" id="english-version">
 
 <h1>Privacy Policy <span style="font-size:1rem;font-weight:normal;color:#666;">(English)</span></h1>
-<p class="updated">Extension: <strong>Conceptum IA</strong> &nbsp;|&nbsp; Last updated: June 1, 2026</p>
+<p class="updated">Extension: <strong>Conceptum IA</strong> &nbsp;|&nbsp; Last updated: July 3, 2026</p>
 <p class="lang-link"><a href="#top">Versão em português acima ↑</a></p>
 
 <p>This Privacy Policy fully describes how the <strong>Conceptum IA</strong> browser extension ("extension") collects, uses, processes, stores, and shares information. By installing or using the extension, you agree to the practices described in this document.</p>
@@ -361,7 +377,7 @@ Contact: <a href="mailto:rrc_temp-conceptum@yahoo.com">rrc_temp-conceptum@yahoo.
     <tr>
       <td><strong>Judicial case content (site content)</strong></td>
       <td>Text extracted from PDF documents opened by the user in the PJe system</td>
-      <td>Sent to the AI provider's API chosen by the user to generate analysis, summaries, or responses about the case. The extension does not store or process this content — it is transmitted directly to the selected provider.</td>
+      <td>Sent to the AI provider's API chosen by the user to generate analysis, summaries, or responses about the case. The extension does not store or process this content — it is transmitted directly to the selected provider. When the document is scanned (an image), the page images may be sent to an OCR service — a vision-capable AI provider or Google Cloud Vision — to extract the text.</td>
       <td>User consent when triggering analysis (Art. 7, I, LGPD)</td>
       <td>API of the provider chosen by the user (see Section 4)</td>
     </tr>
@@ -479,6 +495,18 @@ Contact: <a href="mailto:rrc_temp-conceptum@yahoo.com">rrc_temp-conceptum@yahoo.
       <td><a href="https://moonshot-ai.com/privacy-policy" target="_blank">Moonshot AI Privacy Policy</a></td>
     </tr>
     <tr>
+      <td><strong>OpenRouter</strong> <small>(aggregator — routes the request to model companies such as Anthropic, OpenAI, Google, xAI, DeepSeek, Moonshot, Mistral, Qwen)</small></td>
+      <td>Case content (text or page images for OCR) + user's API key</td>
+      <td>AI-generated analysis or OCR — only when the user selects this provider</td>
+      <td><a href="https://openrouter.ai/privacy" target="_blank">OpenRouter Privacy Policy</a></td>
+    </tr>
+    <tr>
+      <td><strong>Google Cloud Vision</strong> <small>(OCR engine)</small></td>
+      <td>Images of scanned document pages + user's API key</td>
+      <td>Optical character recognition (OCR) to extract text from image-based PDFs — only when the user selects this OCR engine in the Initial Screening (Triagem Inicial)</td>
+      <td><a href="https://cloud.google.com/terms/cloud-privacy-notice" target="_blank">Google Cloud Privacy Notice</a></td>
+    </tr>
+    <tr>
       <td><strong>Supabase</strong> (USA)</td>
       <td>Session token; account data created by the user</td>
       <td>Authentication and account/license management — only if the user creates an account</td>
@@ -490,7 +518,7 @@ Contact: <a href="mailto:rrc_temp-conceptum@yahoo.com">rrc_temp-conceptum@yahoo.
 <p><strong>We do not sell, rent, lend, or share data with advertisers, data brokers, or any other third parties beyond those listed above.</strong></p>
 
 <h2>5. International Data Transfers</h2>
-<p>The AI providers (Anthropic, OpenAI, Google, DeepSeek, xAI, PPQ.AI, Z.AI, Moonshot AI), the authentication server (Cloudflare Workers), and the database (Supabase) operate on servers located outside Brazil, predominantly in the United States. By using the extension and choosing an AI provider, the user consents to this international transfer, which is necessary to provide the service. Each provider is subject to its own privacy policy, as indicated in Section 4.</p>
+<p>The AI providers (Anthropic, OpenAI, Google, DeepSeek, xAI, PPQ.AI, Z.AI, Moonshot AI, OpenRouter), the Google Cloud Vision OCR engine, the authentication server (Cloudflare Workers), and the database (Supabase) operate on servers located outside Brazil, predominantly in the United States. By using the extension and choosing an AI provider, the user consents to this international transfer, which is necessary to provide the service. Each provider is subject to its own privacy policy, as indicated in Section 4.</p>
 
 <h2>6. Data Retention</h2>
 
@@ -515,7 +543,7 @@ Contact: <a href="mailto:rrc_temp-conceptum@yahoo.com">rrc_temp-conceptum@yahoo.
     </tr>
     <tr>
       <td>Judicial case content</td>
-      <td>AI providers (per each provider's policy)</td>
+      <td>AI providers and the Google Cloud Vision OCR engine (per each one's policy)</td>
       <td>Determined by the policy of the provider chosen by the user; the extension retains no copy</td>
     </tr>
     <tr>
