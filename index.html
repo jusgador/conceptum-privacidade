@@ -36,7 +36,7 @@
 <!-- ═══════════════════  VERSÃO EM PORTUGUÊS  ═══════════════════ -->
 
 <h1>Política de Privacidade</h1>
-<p class="updated">Extensão: <strong>Conceptum IA</strong> &nbsp;|&nbsp; Última atualização: 3 de julho de 2026</p>
+<p class="updated">Extensão: <strong>Conceptum IA</strong> &nbsp;|&nbsp; Última atualização: 14 de julho de 2026</p>
 <p class="lang-link"><a href="#english-version">English version below ↓</a></p>
 
 <p>Esta Política de Privacidade descreve de forma completa como a extensão <strong>Conceptum IA</strong> ("extensão") coleta, usa, processa, armazena e compartilha informações. Ao instalar ou utilizar a extensão, você concorda com as práticas descritas neste documento.</p>
@@ -87,6 +87,13 @@ Contato: <a href="mailto:rrc_temp-conceptum@yahoo.com">rrc_temp-conceptum@yahoo.
       <td>Enviado à API do provedor de IA escolhido pelo usuário para gerar análise, resumo ou resposta sobre o processo. A extensão não armazena nem processa esse conteúdo — ele é transmitido diretamente ao provedor selecionado. Quando o documento é digitalizado (imagem), as imagens das páginas podem ser enviadas a um serviço de OCR — um provedor de IA com visão ou o Google Cloud Vision — para extração do texto.</td>
       <td>Consentimento do usuário ao acionar a análise (art. 7º, I, LGPD)</td>
       <td>API do provedor escolhido pelo usuário (veja Seção 4)</td>
+    </tr>
+    <tr>
+      <td><strong>Consultas de pesquisa de jurisprudência</strong></td>
+      <td>Termos de busca jurídicos gerados pela IA a partir da peça selecionada (revisáveis e editáveis pelo usuário antes do envio; a IA é instruída a não incluir nomes das partes nem o número do processo) e, ao carregar a ementa completa de um resultado, o número do processo da decisão pesquisada (dado público de jurisprudência)</td>
+      <td>Pesquisar decisões na base pública de jurisprudência do TRF5, na aba experimental de jurisprudência — somente quando o usuário aciona a pesquisa. Os resultados não são armazenados de forma persistente pela extensão.</td>
+      <td>Consentimento do usuário ao acionar a pesquisa (art. 7º, I, LGPD)</td>
+      <td>API pública de jurisprudência do TRF5 (juliapesquisa.trf5.jus.br, Brasil)</td>
     </tr>
     <tr>
       <td><strong>Credenciais de IA (informações de autenticação)</strong></td>
@@ -216,6 +223,12 @@ Contato: <a href="mailto:rrc_temp-conceptum@yahoo.com">rrc_temp-conceptum@yahoo.
       <td><a href="https://cloud.google.com/terms/cloud-privacy-notice" target="_blank">Aviso de privacidade do Google Cloud</a></td>
     </tr>
     <tr>
+      <td><strong>TRF5 — Tribunal Regional Federal da 5ª Região</strong> <small>(API pública de jurisprudência — juliapesquisa.trf5.jus.br, Brasil)</small></td>
+      <td>Termos de busca jurídicos gerados pela IA a partir da peça selecionada (sem nomes das partes nem número do processo; editáveis pelo usuário antes do envio) e número de processo de decisões pesquisadas (dado público)</td>
+      <td>Pesquisa de jurisprudência na base pública do próprio tribunal — somente quando o usuário aciona a pesquisa na aba de jurisprudência</td>
+      <td>Órgão público brasileiro, sujeito à LGPD (Lei nº 13.709/2018)</td>
+    </tr>
+    <tr>
       <td><strong>Supabase</strong> (EUA)</td>
       <td>Token de sessão; dados de conta criados pelo usuário</td>
       <td>Autenticação e gerenciamento de conta/licença — somente se o usuário criar conta</td>
@@ -227,7 +240,7 @@ Contato: <a href="mailto:rrc_temp-conceptum@yahoo.com">rrc_temp-conceptum@yahoo.
 <p><strong>Não vendemos, alugamos, cedemos nem compartilhamos dados com anunciantes, corretores de dados ou quaisquer outros terceiros além dos listados acima.</strong></p>
 
 <h2>5. Transferência internacional de dados</h2>
-<p>Os provedores de IA (Anthropic, OpenAI, Google, DeepSeek, xAI, PPQ.AI, Z.AI, Moonshot AI, OpenRouter), o mecanismo de OCR Google Cloud Vision, o servidor de autenticação (Cloudflare Workers) e o banco de dados (Supabase) operam em servidores localizados fora do Brasil, predominantemente nos Estados Unidos. Ao utilizar a extensão e escolher um provedor de IA, o usuário consente com essa transferência internacional, necessária para a prestação do serviço. Cada provedor está sujeito à sua própria política de privacidade, indicada na Seção 4.</p>
+<p>Os provedores de IA (Anthropic, OpenAI, Google, DeepSeek, xAI, PPQ.AI, Z.AI, Moonshot AI, OpenRouter), o mecanismo de OCR Google Cloud Vision, o servidor de autenticação (Cloudflare Workers) e o banco de dados (Supabase) operam em servidores localizados fora do Brasil, predominantemente nos Estados Unidos. Ao utilizar a extensão e escolher um provedor de IA, o usuário consente com essa transferência internacional, necessária para a prestação do serviço. Cada provedor está sujeito à sua própria política de privacidade, indicada na Seção 4. A consulta de jurisprudência (Seção 4) é dirigida a servidor do próprio TRF5, localizado no Brasil, e não envolve transferência internacional de dados.</p>
 
 <h2>6. Retenção de dados</h2>
 
@@ -335,7 +348,7 @@ Contato: <a href="mailto:rrc_temp-conceptum@yahoo.com">rrc_temp-conceptum@yahoo.
 <hr class="section-divider" id="english-version">
 
 <h1>Privacy Policy <span style="font-size:1rem;font-weight:normal;color:#666;">(English)</span></h1>
-<p class="updated">Extension: <strong>Conceptum IA</strong> &nbsp;|&nbsp; Last updated: July 3, 2026</p>
+<p class="updated">Extension: <strong>Conceptum IA</strong> &nbsp;|&nbsp; Last updated: July 14, 2026</p>
 <p class="lang-link"><a href="#top">Versão em português acima ↑</a></p>
 
 <p>This Privacy Policy fully describes how the <strong>Conceptum IA</strong> browser extension ("extension") collects, uses, processes, stores, and shares information. By installing or using the extension, you agree to the practices described in this document.</p>
@@ -386,6 +399,13 @@ Contact: <a href="mailto:rrc_temp-conceptum@yahoo.com">rrc_temp-conceptum@yahoo.
       <td>Sent to the AI provider's API chosen by the user to generate analysis, summaries, or responses about the case. The extension does not store or process this content — it is transmitted directly to the selected provider. When the document is scanned (an image), the page images may be sent to an OCR service — a vision-capable AI provider or Google Cloud Vision — to extract the text.</td>
       <td>User consent when triggering analysis (Art. 7, I, LGPD)</td>
       <td>API of the provider chosen by the user (see Section 4)</td>
+    </tr>
+    <tr>
+      <td><strong>Case-law search queries</strong></td>
+      <td>Legal search terms generated by the AI from the selected case document (reviewable and editable by the user before submission; the AI is instructed not to include party names or the case number) and, when loading the full text of a result, the case number of the searched decision (public case-law data)</td>
+      <td>Search decisions in the TRF5 public case-law database, in the experimental case-law tab — only when the user triggers the search. Results are not persistently stored by the extension.</td>
+      <td>User consent when triggering the search (Art. 7, I, LGPD)</td>
+      <td>TRF5 public case-law API (juliapesquisa.trf5.jus.br, Brazil)</td>
     </tr>
     <tr>
       <td><strong>AI credentials (authentication information)</strong></td>
@@ -515,6 +535,12 @@ Contact: <a href="mailto:rrc_temp-conceptum@yahoo.com">rrc_temp-conceptum@yahoo.
       <td><a href="https://cloud.google.com/terms/cloud-privacy-notice" target="_blank">Google Cloud Privacy Notice</a></td>
     </tr>
     <tr>
+      <td><strong>TRF5 — Tribunal Regional Federal da 5ª Região</strong> <small>(public case-law API — juliapesquisa.trf5.jus.br, Brazil)</small></td>
+      <td>Legal search terms generated by the AI from the selected case document (no party names or case number; editable by the user before submission) and case numbers of searched decisions (public data)</td>
+      <td>Case-law search in the court's own public database — only when the user triggers the search in the case-law tab</td>
+      <td>Brazilian public body, subject to the LGPD (Law No. 13,709/2018)</td>
+    </tr>
+    <tr>
       <td><strong>Supabase</strong> (USA)</td>
       <td>Session token; account data created by the user</td>
       <td>Authentication and account/license management — only if the user creates an account</td>
@@ -526,7 +552,7 @@ Contact: <a href="mailto:rrc_temp-conceptum@yahoo.com">rrc_temp-conceptum@yahoo.
 <p><strong>We do not sell, rent, lend, or share data with advertisers, data brokers, or any other third parties beyond those listed above.</strong></p>
 
 <h2>5. International Data Transfers</h2>
-<p>The AI providers (Anthropic, OpenAI, Google, DeepSeek, xAI, PPQ.AI, Z.AI, Moonshot AI, OpenRouter), the Google Cloud Vision OCR engine, the authentication server (Cloudflare Workers), and the database (Supabase) operate on servers located outside Brazil, predominantly in the United States. By using the extension and choosing an AI provider, the user consents to this international transfer, which is necessary to provide the service. Each provider is subject to its own privacy policy, as indicated in Section 4.</p>
+<p>The AI providers (Anthropic, OpenAI, Google, DeepSeek, xAI, PPQ.AI, Z.AI, Moonshot AI, OpenRouter), the Google Cloud Vision OCR engine, the authentication server (Cloudflare Workers), and the database (Supabase) operate on servers located outside Brazil, predominantly in the United States. By using the extension and choosing an AI provider, the user consents to this international transfer, which is necessary to provide the service. Each provider is subject to its own privacy policy, as indicated in Section 4. The case-law search (Section 4) is directed to a server operated by TRF5 itself, located in Brazil, and does not involve any international data transfer.</p>
 
 <h2>6. Data Retention</h2>
 
